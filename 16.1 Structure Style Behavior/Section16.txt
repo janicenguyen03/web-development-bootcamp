@@ -1,0 +1,68 @@
+Adding Javascript to Websites
+    inline: <body onload="alert('Hello')">
+    internal: script tag inside body, just before closing the body tag
+        <script type="text/javascript">
+            alert("Hello");
+        </script>
+    external: script: at the end just before closing the body tag
+        <script src="" charset="utf-8"></script>
+
+Introduction to the Document Object Model (DOM)
+    document.firstElementChild
+    document.lastElementChild
+    document.firstElementChild.lastElementChild.firstElementChild
+    var heading = document.firstElementChild.lastElementChild.firstElementChild
+    heading.innerHTML
+    heading.style.color="red"
+    document.querySelector("input").click()
+
+    var third = document.firstElementChild.lastElementChild.querySelector("ul").lastElementChild
+    third.innerHTML = "anything"
+
+    Properties: describe sth about the object
+    Methods: things that the object can do
+
+    Getter, Setter
+    Call Method
+
+Selecting HTML Elements with Javascript
+    getElementsByTagName("li") -> array, behave as an array
+    getElemetsByClassName("btn") -> array, even only one item
+    getElementByID("title") -> return one item only
+    querySelector("") -> return one item only | selector: selector as in css
+        querySelector(".btn")
+        querySelector("#title")
+        querySelector("li a")
+
+        get back the first item in the document that satisfy the selector
+    querySelectorAll("#list .item") | array
+
+    document.querySelector("li a").style.color="red";
+
+Manipulating and Changing Styles of HTML Elements with Javascript
+    style.fontSize
+    style.padding = "30%"
+    document.querySelector(".btn").style.backgroundColor = "yellow"
+
+The Separation of Concerns: Structure vs Style vs Behavior
+    document.querySelector("button").classList.add("invisible") | add a class
+    document.querySelector("button").classList.remove("invisible")
+    document.querySelector("button").classList.toggle("invisible")
+        apply if not already apply, unapply if already apply
+    
+    .invisible {
+        visibility: hidden;
+    }
+
+    document.querySelector("h1").classList.add("huge")
+
+Text Manipulation and the Text Content Property
+    document.getElementByID("title").innerHTML = "Good Bye";
+    document.getElementByID("title").textContent = "Hello";
+    document.querySelector("h1").innerHTML="<em>Good Bye</em>";
+
+Manipulating HTML Element Attributes
+    document.querySelector("a").attributes; | seeing the attributes
+    document.querySelector("a").getAttribute("href"); | get a specific
+    document.querySelector("a").setAttribute("href", "https://www.bing.com"); | change
+

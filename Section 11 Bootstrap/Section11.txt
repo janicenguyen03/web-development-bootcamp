@@ -1,0 +1,32 @@
+CSS frameworks
+    When to: complex / When not to: either simple or really complicated
+    How to use Bootstrap: Include via CDN (current delivery network)
+        head section
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        before the end of body section
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+Bootstrap Layout
+    Breakpoint
+    Multiple Breakpoint
+    Mix & Match
+    Exercise: https://appbrewery.github.io/bootstrap-layout/
+        1. 
+            <div class="col-sm-12 col-xl-6">50% desktop, 100% mobile</div>
+            <div class="col-sm-12 col-xl-6">50% desktop, 100% mobile</div>
+        2.
+            <div class="col-xl-6 col-sm-12 col-10">Column 1</div>
+            <div class="col-xl-3 col-sm-6 col-10">Column 2</div>
+            <div class="col-xl-3 col-sm-6 col-10">Column 3</div>
+        3.
+            <div class="col-md-6 col-lg-4 col-xl-2 col-xxl-1">Column 1</div>
+            <div class="col-md-6 col-lg-8 col-xl-10  col-xxl-11">Column 2</div>
+
+Bootstrap components
+    Buttons - btn
+    Navbar
+    Spacing
+    Dark Mode
+        <html lang="en" data-bs-theme="dark">
+    www.w3schools.com/bootstrap/bootstrap_templates.asp

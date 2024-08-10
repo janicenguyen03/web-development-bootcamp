@@ -1,0 +1,94 @@
+A. Adding CSS into HTML
+    1. Inline:
+        <tag style="css" />
+    2. Internal:
+        <style>css</style>
+    3. External:
+        <link rel="stylesheet" href="style.css"/>
+
+1. Inline:
+    <html style="background:blue">
+        * Note: background: property; blue: value
+    </html>
+    - need to be added to every element
+    - normally not recommended
+    - only for specific sections, or when testing, or when only want it in one single element
+    - target a single element
+
+2. Internal:
+    <html>
+        <head>
+            <style>
+                html {
+                    background: red;
+                }
+            </style>
+        </head>
+    </html>
+    
+    html{} : select to set the red background on the html
+
+    - useful for applying it only to one HTML document
+    - shouldn't use for multipage website
+    - target a single webpage
+
+3. External:
+    - lives in a completely separate file
+    - .css extension
+    Selector {
+        property: value
+    }
+    - inside head section of HTML
+        <html>
+            <head>
+                <link
+                    rel="stylesheet" <- relationship
+                    href="./styles.css" <- location of the css file
+                /> : void element, no closing tag
+            </head>
+        </html>
+    
+    - use for most cases, when you have a multi-page website
+
+CSS Selector: part that selects the HTMl in order to apply whichever rules go in btwn {}
+    Element Selector: particular html tags - all elements with the tags
+        h1{
+            color: blue
+        }
+
+    Class Selector: class: sth we can add as an attribute inside an opening tag. Case-sensitive
+        .red-text {
+            color: red
+        }
+        <h2 class="red-text">Red</h2>
+        <p class="red-text">Paragraph</p>
+            Both will be displayed in red
+        - Can be applied to multiple elements
+
+    Id Selector: id: an attribute can be added inside an opening tag
+        #main {
+            color: red
+        }
+        <h2 id=“main">Red</h2>
+        - Only apply to only one element in a single HTML file
+            - only one with id="main" across the HTML: unique and difference
+
+    Attribute Selector:
+        HTMLelement[selected attribute] {
+            property: value
+        }
+        <p draggable="true">Drag me</p>
+        <p draggable="false">Don't drag me</p>
+        <p draggable="false">Don't drag me</p>
+        p[draggable="false] {
+            color: red;
+        }
+
+    Universal Selector: selects all
+        * {
+            color: red
+        }
+        <h1 class="title">Hello</h1>
+        <h2 id="heading">World</h2>
+        <p draggable="true">This is a website</p>
+        

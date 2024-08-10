@@ -1,0 +1,59 @@
+Introduction to Web Design
+
+Understanding Colour Theory
+    - moods of the colors
+        red: love, energy, intensity
+        yellow: joy, intellect, attention
+        green: freshness, safety, growth
+        blue: stability, trust, serenity
+        purple: royalty, wealth, femininity
+    - Combining colors:
+        Analogous Colours: two colors next to each other on color wheel
+            harmonious: navigation bar, logo and background
+            not for standing out
+        Complementary colours: for standing out
+            for logos, icons
+            not for style text and text background
+        Triadic color pallette
+        Adobe color - color combinations
+        colorhunt.co
+
+Understanding Typography and How to Choose a Font
+    Serif: with feet - look serious, authoritative, older
+        letter head for a legal company/ magazine
+        Old style
+        Transitional
+        Modern (like Didot)
+        Slab-Serif
+    Moods: 
+        Serif: traditional stable respectable
+        Sans Serif: sensible simple straightforward
+            Grotesque, Neo-grotesque, Humanist, Geometric
+        Script: personal creative elegant
+        Display: friendly loud amusing
+        Modern: stylish chic smart
+    2 fonts in one Design
+        similar mood/time era
+        contrast serif-ness and weights
+
+Manage ATTENTION with effective User Interface (UI) Design
+    1. Hierarchy
+        Color: higher contrast -> higher hierarchy
+        Size: bigger -> higher hierarchy
+    2. Layout
+        40-60 char per line
+    3. Alignment
+    4. Whitespace
+    5. Audience
+
+User Experience (UX) Design
+    1. Simplicity
+    2. Consistency
+    3. Reading Patterns: use the F-layout or the Z-layout (for website with video)
+    4. All platform design
+        avoid banners or full page
+        professional testers
+    5. Don't use your powers for evil (dark patterns)
+        not necessarily want the users want
+
+Web Design in Practice

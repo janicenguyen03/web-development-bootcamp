@@ -1,0 +1,101 @@
+CSS Display
+    <span>
+    display: inline/block/inline-block/none
+        inline:
+            cannot change the size (width and height)
+            automatically set according to the content
+        inline-block:
+            block: size is changeable
+            inline: elements can go into the same line
+        none: any element disappear
+
+CSS Float: wrapping text using float and clear
+    img {
+        float: left; | set onto the img: img float to the left, text wrap on the left
+    }
+    Footer: related property
+    footer {
+        clear: left; | clear any responsibility to wrap around things that are floating
+    }
+
+    Recommend: only use float to wrap text around an image
+
+Responsiveness: making websites look good on all screen sizes
+    1. Media Queries (put in instead of a selector)
+        @media (max-width: 600px) {
+            /* CSS for screens below or equal to 600px wide*/
+        }
+    2. CSS Grid (2D layout)
+        .grid-container {
+            display: grid
+            grid-template-columns: 1fr 1fr; | fr: fractions
+            grid-template-rows: 100px 200px 200px;
+            gap: 30px;
+        }
+        
+        .first {
+            grid-column: span 2; | make the column span 2 columns
+        }
+
+        .card {
+            background-color: blue;
+        }
+
+    3. CSS Flexbox (1D layout - horizontal or vertical)
+        .flex-container {
+            display: flex;
+        }
+
+        .card {
+            background: blue;
+            border: 30px solid white;
+            height: 100px;
+            flex: 1
+        }
+
+        .first {
+            flex: 2; | twice the width of each of the unmodified ones
+        }
+
+        .second {
+            flex: 0.5; | half the width of each of the unmodified ones
+        }
+    4. External Frameworks e.g. Bootstrap
+        <div class="container">
+            <div class="row">
+                <div class="card col-6">
+                    Card
+                </div>
+                <div class="card col-2">
+                    Card
+                </div>
+                <div class="card col-4">
+                    Card
+                </div>
+            </div>
+        </div>
+
+Media Query: adding breakpoints to define responsive layouts (kinda like if else)
+    @media (max-width: 600px) {
+        div {
+            height: 100px;
+            width: 100px;
+        }
+        h1 {
+            font-size: 15px;
+        }
+    }
+
+    Combine
+        @media (min-width: 600px) and (max-width: 900px) {
+            /* Styles for screens between 600px and 900px */
+        }
+
+        @media (max-width: 600px) and (min-width: 900px) {
+            /* Styles for screens less than 600px and greater than 900px */
+        }
+
+    Device
+        @media screen | not necessary by default
+        @media print(orientation: landscape) | when printed
+    

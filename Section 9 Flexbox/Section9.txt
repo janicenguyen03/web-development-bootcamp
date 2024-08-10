@@ -1,0 +1,50 @@
+Display Flex
+    Creating tables:
+        <table>
+            <tr class="row">
+                <td class="col1">...</td>
+                <td class="col2">...</td>
+                <td class="col3">...</td>
+            </tr>
+        </table>
+        - for tabular data better
+        - not for web design
+    Flex:
+        display: flex (but doesn't relate to inline/block/inline-block)
+        gap
+        width: based on the content size
+
+        inline-flex: box can occupy as much space as it needs
+        but other can also goes into the same line
+
+Flex Direction
+    flex direction: along a row
+        main-axis, cross-axis (vertical)
+    flex-direction: column
+        main-axis, cross-axis (horizontal)
+    flex-basis (cross-axis): 100px (height for column, width for row, set on the child)
+
+Flexible Layout: Align, Justify, Wrap: https://appbrewery.github.io/flex-layout/
+    order: 0 by default
+    flex-wrap: nowrap by default
+        on to the next line -> flex-wrap: wrap
+    justify-content: flex-start/flex-end/center (apply to the parent item)
+                        /space-between/space-around/space-evenly
+    align-items: flex-start/flex-end/baseline/stretch (along the cross axis, apply to the container);
+        set the height of the container
+        height: 70vh
+        vh= viewport height (screen)
+    align-self: independent item (on the children)
+    align-content (only able when flexwrap:wrap)
+
+Flex Sizing:
+    Priority list
+        min-width/max-width > flex-basis > width > content width
+        Content width < width < flex-basis < min-width/max-width
+
+    flex-grow: 0/1;
+    flex-shrink: 0/1; (0: off; 1: on)
+    flex: 1 1 0; (grow shrink basis) = flex: 1
+    ratio: flex: 1 | 2 | 3
+
+Flexbox Pricing:

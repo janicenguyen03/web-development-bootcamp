@@ -1,0 +1,44 @@
+The List Element:
+    Unordered List: <ul></ul>
+        Go on separate lines. View in bullet points. Example:
+        <ul>
+            <li>Milk</li>
+            <li>Eggs</li>
+        </ul>
+    Ordered List: <ol></ol>
+        Go on separate lines. View in numbers. Example:
+            <ol>
+                <li>Milk</li>
+                <li>Eggs</li>
+            </ol>
+        Change start of the list:
+            <ol start="4">
+                <li>Milk</li>
+                <li>Eggs</li>
+            </ol>
+
+Nested List:
+    <ul>
+        <li>A
+            <ol>
+                <li>A1</li>
+                <li>A2</li>
+            </ol>
+        </li>
+        <li>B</li>
+    </ul>
+
+Anchor Element:
+    Tag: <a></a>   
+    Some attributes:
+        href:  Hyperlink: add the URL that the Hyperlink should go to. Example:
+            <a href="http://www.google.com">This is a link</a>
+        draggable: value=True or False
+
+Image Element (void element - no closing tag):
+    <img src="url" />
+    <img src="https://picsum.photos/200" />
+    <img srcc="https://picsum.photos/200" alt="forest at sunset" />
+    200: size -> 200 x 200 pixels
+    src: source
+    alt: alternative text description

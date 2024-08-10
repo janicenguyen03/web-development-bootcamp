@@ -1,0 +1,109 @@
+The Cascade - Specificity and Inheritance
+    Position: whether a rule is at the higher or lower position in the CSS relative to other rules
+        The lower one replaces the previous one.
+        The lower down the file, the more important the rule is.
+        li {
+            color: red;
+            color: blue;
+        }
+        => On screen: blue
+
+        li {
+            color: red;
+            color: blue;
+        }
+        li { color: green; }
+        => On screen: green
+
+    Specificity: how specific
+        <li id="first-id" class="first-class" draggable>
+        li {color: blue;}               | element
+        .first-class {color: red;}      | class
+        li[draggable] {color: purple;}  | attribute (most cases)
+        #first-id {color: orange;}      | id
+
+        id > attribute > class > element
+
+        Multiple class:
+        <h1 class="a-class another-class">Hello</h1>
+        the lower rule applied.
+
+    Type
+        <link rel="stylesheet" href="./style.css">  | external
+        <style> </style>                            | internal
+        <h1 style=" ">Hello</h1>                    | inline
+
+        inline > internal > external
+
+    Importance
+        color: red;
+        color: green !important;
+        => green is the MOST important rule;
+
+    Importance > Type > Specificity > Position
+
+Combining CSS Selectors
+    element in the class -> descendant within the class
+    .[class] [element] {
+        property: value;
+    }
+
+    Group (using a coma) = apply to both selectors
+        selector, selector {
+            property: value;
+        }
+    
+    Child (using ">") = apply to direct child of left side (only one generation deep)
+        [parent selector] > [child selector] {
+            property: value;
+        }
+    
+    Descendant (using a single space) = apply to a descendent of left side
+        [ancestor selector] [descendent selector] {
+            property: value;
+        }
+        - recommended unless you want to select the direct child only
+    
+    Chaining (no separator) = apply where ALL selectors are true
+        [selector][selector] {
+            property: value;
+        }
+        Eg: h1#title.big.heading {color: seagreen}
+        <h1 id="title" class="big heading">Hello World</h1>
+        - be careful cuz it can be confusing
+        - start off with an element > class > id
+        - no space
+    
+    Combining Combiners
+        [ancestor selector] [selector][selector] {
+            property: value;
+        }
+
+CSS Positioning
+    Static
+        HTML default flow
+        applied by default
+        position:
+        top
+        left
+        right
+        bottom
+
+    Relative (mostly used)
+        Position relative to default position
+        - moved it relative to the default place
+        position: relative
+
+    Absolute
+        Position relative to nearest positioned ancestor
+        or (if no ancestor is positioned then) top left corner of webpage.
+        position: absolute
+
+        Z-index (which one on top of which)
+            higher z will be on top of the lower one
+            set the layer
+    Fixed
+        Position relative to top left corner of browser window
+        when get scrolled, it stays
+
+

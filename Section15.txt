@@ -1,0 +1,88 @@
+Random Number Generation
+    var n = Math.random();
+        -> 0 - 0.9999999999999999
+        16 decimal places
+    n = n * 6; (times to the number of range that we need)
+    n = Math.floor(n) + 1; (round then add 1 for 1 to 6)
+
+    prompt("What is your name?");
+    prompt("What is their name?");
+    var loveScore = Math.random() * 100;
+    loveScore = Math.floor(loveScore) + 1;
+    alert("Your love score is" + loveScore + "%");
+
+Control Statements: Using If-Else Conditionals & Logic
+    if (track === "clear") {
+        goStraight();
+    } else {
+        turnRight();
+    }
+
+Comparators and Equality
+    > >= < <= === !== == !=
+    ===: check if the data types are also matching
+    var a = 1;
+    var b = "1";
+    return False if check for a === b 
+    return True if check for a == b  
+
+Combining Comparators
+    && AND 
+    || OR
+    ! NOT
+    (loveScore > 30 && loveScore <= 70)
+
+Collections: Working with Javascript Arrays
+    var eggs = [0, 1, 2, 3, 4]
+    var myEgg = eggs[1] -> 1
+    eggs.length = 5
+    eggs.includes(2);
+    var guestName = prompt("What is your name?");
+    if eggs.includes(guestName) {
+        alert("welcome to the party");
+    } else {
+        alert("Sorry, maybe next time.");
+    }
+
+Adding Elements and Intermediate Array Techniques
+    adding elements: array.push(item) - push to the end
+    remove the last item: array.pop
+
+    var output = [];
+    var count = 1;
+
+    function fizzBuzz() {
+
+        while (count <= 100) {
+            if (count % 15 === 0) {
+                output.push("FizzBuzz");
+            } else if (count % 5 === 0) {
+                output.push("Buzz");
+            } else if (count % 3 === 0) {
+                output.push("Fizz");
+            } else {
+                output.push(count);
+            }
+            count++;
+        }
+        console.log(output); 
+    }
+
+Who's Buying Lunch
+    mindful of space
+
+Control Statements: While Loops | Check for state
+    while (something is true) {
+        // Do something
+    }
+
+Control Statements: For Loops | Iterate
+    for (var i=0; i<2; i++) {
+        // Do something
+    }
+
+    for (var i = 1; i<2; i++) {
+        console.log(i);
+    } => syntactic sugar
+Fibonacci Code Challenge
+

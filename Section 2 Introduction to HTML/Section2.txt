@@ -1,0 +1,19 @@
+
+General
+    <tag attribute=value>Content</tag>
+    <tag attribute=value anotherattribute=value>Content</tag>
+Heading elements:
+    <h1> - <h6>
+    <h1>Content</h1>
+    Opening tag: <h1>
+    Closing tag: </h1>
+Paragraph element:
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+Void elements:
+    Horizontal Rule (a horizontal line across the page):
+        <hr />
+        <hr>
+    Break (separate lines in one paragraph):
+        <br />
+        <br>

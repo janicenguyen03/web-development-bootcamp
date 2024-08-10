@@ -1,0 +1,83 @@
+Color Properties
+    html {
+        background-color: red
+    }
+
+    h1 {
+        color: blue
+    }
+
+    color: text
+    background-color: background
+    - named colors: https://developer.mozilla.org/en-US/docs/Web/CSS/named-color
+    - RGB mixer for hexcode: https://www.csfieldguide.org.nz/en/interactives/rgb-mixer/
+
+Font Properties
+    h1 {
+        color: blue
+        font-weight: bold
+        font-size: 20px
+        font-family: sans-serif
+    }
+
+    Font Size
+        h1 {
+            font-size: 20px
+        }
+
+        1px (pixel) = 1/96th inch = 0.26mm
+        1pt (point) = 1/72nd inch = 0.35mm (used in applications)
+        1em ("m")   = 100% of parent (head or body)
+            2em = 200%
+            - relative size
+        1rem ()     = 100% of root (html)
+            - relative size: compared to the root -> more consistent
+            - define footer and headings of the footer
+    
+    Font weight
+        h1 {
+            font-weight: bold
+        }
+        
+        Keywords: normal, bold (looks heavier)
+        Relative to parent: lighter (-100), bolder (+100)
+        Number: 100-900
+    
+    Font Family 
+        h1 {
+            font-family: Helvetica, sans-serif
+        }
+
+        h2 {
+            font-family: "Times New Roman", serif
+        }
+        Helvetica: typeface - lots of computers do not own the typeface
+        font-family: [font name], [backup generic font type]
+        font name with spaces: "[font name]"
+        Free font resource: fonts.google.com
+
+    Text Align
+        h1 {
+            text-align: center
+        }
+
+        start (left), end (right), center, justify
+
+Box Model Margin Padding Border:
+    Border:
+        border: [thickness] [style: solid/dashed] [color: named/hex] - doesn not change margin
+        border-top: [thickness] - top of the border
+        border-width: [top] [right] [bottom] [left]
+        border-width: [top-bottom] [right-left]
+
+    Padding: inside border - space between the element and the border
+        <p>
+    
+    Margin: outside border
+
+    Content Division Element:
+        <div></div> : invisible - invisible boxes
+    
+    Pesticide Chrome Extension: debugging CSS
+
+

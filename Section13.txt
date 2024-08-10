@@ -1,0 +1,99 @@
+        Javascript Introduction
+
+Javascript Alerts
+    alert("Hello");
+
+Data Types
+    String, numbers, bool
+    typeof() -> returns the type of a variable
+
+Javascript Variables
+    prompt() - allows the user to input = input()
+    var myName = "Angela";
+    var yourName = prompt("What is your name?");
+
+Naming and Naming Conventions for Javascript Variables
+    Clear console: Ctrl + K | Command + K
+    Clear all data: refresh -> empty cache
+    Meaningful name, no space, not keyword number
+    Camel Casing: myName, myVar
+
+String Concatenation
+    "a" + " " + "b"
+    for number: var + (140 - tweetCount) + var;
+
+String Lengths and Retrieving the Number of Characters
+    word.length;
+    var.length;
+
+Slicing and Extracting Parts of a String
+    slice(x, y)
+    var name = "Angela";
+    name.slice(0, 1); | first character
+
+    var tweet = prompt("Compose your tweet:");
+    var tweetUnder140 = tweet.slice(0, 140);
+    alert(tweetUnder140);
+
+    alert(prompt("Compose your tweet:").slice(0, 140))
+
+Challenge: Changing Casing in Text
+    word.toUpperCase();
+    word.toLowerCase();
+
+Basic Arithmetic and the Modulo Operator in Javascript
+    + - * / % ()
+
+Increment and Decrement Expressions
+    var x = 5;
+    x++;
+    x--;
+    x += 2;
+    x -= y;
+    var y = x++; | y is assigned to x before incremented
+
+Functions Part 1: Creating and Calling Functions
+    function getMilk() {
+        /* code */
+    }
+    getMilk();
+
+    Ctrl F | A <-> B
+    console.log -> developer to debug
+    alert -> for users
+
+Functions Part 1 Challenge - The Karel Robot
+
+Functions Part 2: Parameters and Arguments
+    function getMilk(upperLim) {   
+        var bottles = Math.floor(upperLim / 1.5);
+        console.log("leaveHouse");
+        console.log("moveRight");
+        console.log("moveRight");
+        console.log("moveUp");
+        console.log("moveUp");
+        console.log("moveUp");
+        console.log("moveUp");
+        console.log("moveRight");
+        console.log("moveRight");
+        console.log("buy " + bottles + " bottles of Milk");
+        console.log("moveLeft");
+        console.log("moveLeft");
+        console.log("moveDown");
+        console.log("moveDown");
+        console.log("moveDown");
+        console.log("moveDown");
+        console.log("moveLeft");
+        console.log("moveLeft");
+        console.log("enterHouse");
+    }
+
+function getMilk(bottles) {
+    var cost = bottles * 1.5;
+    // Do sth with cost
+}
+
+Functions Part 3: Outputs & Return Values
+    return upperLim % 1.5;
+    var change = getMilk(4)
+

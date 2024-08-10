@@ -1,0 +1,25 @@
+Relative file path (used most times):
+    ../essay.docx
+    ../ (two double dots): go up a level
+    ./ (single dot): in the current directory
+        can be removed but don't work all the time
+        ./ -> recommended
+
+Embed a link inside an image:
+    <a href=""><img src="" alt="" /></a>
+
+HTML Boilerplate
+    <!DOCTYPE html> : tells the browswer which version of HTML the file was written in
+    <html lang="en">[..]</html>: "root" of the document
+        - lang: language of the text of the document -> for screen readers
+    <head> </head> head element:
+        important information abt our website is placed
+        not present to the users
+        help the website render in the browser correctly
+    <meta> : defined charset
+        charset
+        httep-equiv content -> keeps the html compatible with internet explorer - unnecessary
+        name="viewport" - how the website is displayed relative to the screen that it;s being rendered on
+    <title> </title>: title display on the tab bar
+    <body> </body>: all the content goes
+
