@@ -1,0 +1,39 @@
+Adding Event Listeners to a Button
+    addEventListener()
+        target.addEventListener(type, listener[. options])
+            type: case-sensitive
+            listener: javascript function - no parenthesis
+                with parenthesis - function called without the event
+
+    anonymous funtion: function w/o a name
+        listener: function ()
+
+Higher Order Functions and Passing Functions as Arguments
+    function add(num1, num2) {
+        return num1 + num2;
+    }
+
+    function substract(num1, num2) {
+        return num1 - num2;
+    }
+    function multiply(num1, num2) {
+        return num1 * num2;
+    }
+
+    function divide(num1, num2) {
+        return num1 / num2;
+    }
+    function calculator(num1, num2, operator) {
+        return operator(num1, num2);
+    }
+
+    calculator(4, 5, add);
+    calculator(4, 5, multiply);
+
+    ** DEBUGGER
+    calculator(3, 4, multiply); | ENTER -> Debug mode
+
+    High order functions: functions that can take other functions as inputs
+        not universal
+
+    
