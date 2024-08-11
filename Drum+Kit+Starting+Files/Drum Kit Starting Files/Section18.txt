@@ -40,3 +40,63 @@ How to Play Sounds on a Website
     this: identity of the current button
     this.style.color = "white"; | change into white
     
+How to Use Switch Statements
+    take the code down a different track depending on the value of a variable
+
+A Deeper Understanding of Javascript Objects
+&& Objects, their Methods, and the Dot Notation
+
+    Javascript object:
+    var bellBoy1 = {
+        name: "Timmy",
+        age: 19,
+        hasWorkPermit: true,
+        languages: ["French", "English"]
+    }
+    bellBoy1.name | name
+
+    var houseKeeper1 = {
+        name: "Jane",
+        age: 25,
+        hasWorkPermit: true,
+        yearOfExperience: 12,
+        cleaningRepertoire: ["bathroom", "lobby", "bedroom"]
+    }
+
+    console.log(houseKeeper1.name);
+
+    CONSTRUCTOR FUNCTION: (class)
+    function BellBoy (name, age, hasWorkPermit, languages) {
+        this.name = name;
+        this.age = age;
+        this.hasWorkPermit = hasWorkPermit;
+        this.languages = languages;
+        this.moveSuitcase = function() {
+            alert("May I take your suitcase?");
+            pickUpSuitcase();
+            move();
+        }
+    }
+
+    Initialize Object
+    var bellBoy1 = new BellBoy("Timmy", 19, true, ["French", "English"])
+    bellBoy1.moveSuitcase();
+
+    function HouseKeeper (yearOfExperience, name, cleaningRepertoire) {
+        this.yearOfExperience = yearOfExperience;
+        this.name = name;
+        this.cleaningRepertoire = cleaningRepertoire;
+        this.clean = function() {
+            alert("Cleaning in progress..");
+        }
+    }
+    var houseKeeper1 = new HouseKeeper(12, "Jane", ["bathroom", "lobby", "bedroom"])
+    houseKeeper1.clean();
+
+Using Keyboard Event Listeners to Check for Key Presses
+    "keydown" event listener instead of "keypress"
+
+Understanding Callbacks and How to Respond to addEventListener
+
+Adding Animation to Websites
+
