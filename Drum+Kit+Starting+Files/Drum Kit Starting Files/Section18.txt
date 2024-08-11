@@ -37,4 +37,6 @@ Higher Order Functions and Passing Functions as Arguments
         not universal
 
 How to Play Sounds on a Website
+    this: identity of the current button
+    this.style.color = "white"; | change into white
     
