@@ -97,6 +97,35 @@ Using Keyboard Event Listeners to Check for Key Presses
     "keydown" event listener instead of "keypress"
 
 Understanding Callbacks and How to Respond to addEventListener
+    document.addEventListener("keydown", respondToKey(event));
+    function respondToKey(event) {
+        console.log("Key pressed.");
+    }
+
+    Higher Order Function: addEventListener, 
+        
+    Callback Function: respondToKey
+        > only happens when the function is called/satisfy the requirement
+
+    function sayHi(name) {
+        console.log("Hello, " + name);
+    }
+
+    function anotherAddEventListener(typeOfEvent, callback) {
+        var eventThatHappened = {
+            eventType: "keydown",
+            key: "p",
+            durationOfKeydown: 2
+        }
+
+        if (eventThatHappened.event === typeOfEvent) {
+            callback(eventThatHappened);
+        }
+    }
+
+    anotherAddEventListener("keydown", function(event){
+        console.log(event);
+    })
 
 Adding Animation to Websites
 
