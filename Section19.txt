@@ -1,1 +1,36 @@
-jQuery
+jQuery: JavaScript library
+
+What is jQuery?
+    jQuery("h1")
+    $("h1")
+
+How to Incorporate jQuery into Websites
+    Google jQuery
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    $(document).ready(function() {
+        $("h1").css("color", "red");
+    })
+    same with having google jQuery before adding index.js
+
+Selecting Elements with jQuery
+    Selecting
+    $("<CSS SELECTOR>")
+    $("h1");
+    $("button"); | select ALL
+    no diff between selecting one and many
+
+Manipulating Styles with jQuery
+    $("h1").css("color", "green");
+    $("h1").css("font-size", "5rem");
+    console.log($("h1").css("font-size"));
+
+Manipulating Text with jQuery
+
+Manipulating Attributes with jQuery
+
+Adding Event Listeners with jQuery
+
+Adding and Removing Elements with jQuery
+
+Website Animations with jQuery
+
