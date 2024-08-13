@@ -24,13 +24,76 @@ Manipulating Styles with jQuery
     $("h1").css("font-size", "5rem");
     console.log($("h1").css("font-size"));
 
-Manipulating Text with jQuery
+    $("h1").addClass("big-title");
+    same quotation, add space
+    $("h1").addClass("big-title margin-50");
+    $("h1").removeClass("big-title");
+    $("h1").hasClass("margin-50"); | return boolean
 
+Manipulating Text with jQuery
+    $("h1").text("Bye");
+    <em> : emphasized/italicized
+    .text : purely text
+    $("button").html("<em>Hey</em>")
+    
 Manipulating Attributes with jQuery
+    Getter: $("img").attr("src");
+    Setter: $("a").attr("href", "https://www.yahoo.com");
+
+    Class is also an attribute
+    $("h1").attr("class");
 
 Adding Event Listeners with jQuery
+    $("h1").click(function() {
+        $("h1").css("color", "purple")
+    })
+
+    $("button").click(function() {
+        $("h1").css("color", "purple");
+    })
+
+    $("input").keypress(function(event){
+        console.log(event.key)
+    })
+
+    for the whole website:
+    $(document).keypress(function(event){
+        console.log(event.key)
+    })
+
+    $("h1").on("mouseover", function() {
+        $("h1").css("color", "purple");
+    })
 
 Adding and Removing Elements with jQuery
+    $("h1").before("<button>New</button>")
+        <button>New</button>
+        <h1>Hello</h1>
+    $("h1").after("<button>New</button>")
+    $("h1").prepend("<button>New</button>")
+        <button>New
+            <h1>Hello</h1>
+        </button>
+    $("h1").append("<button>New</button>")
+    $("button").remove(); | remove all the buttons
+
 
 Website Animations with jQuery
+    $("button").on("click", function() {
+        $("h1").hide();
+    })
 
+    $("h1").show();
+    $("h1").toggle();
+    $("h1").fadeout();
+    $("h1").fadein();
+    $("h1").slideUp();
+    $("h1").slideDown();
+    $("h1").slideToggle();
+
+    animate: stick with numerical value
+        margin, opacity
+        $("h1").animate({
+            opacity: 0.5,
+            margin: "20%"
+        })
