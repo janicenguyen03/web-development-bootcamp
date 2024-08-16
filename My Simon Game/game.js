@@ -33,7 +33,7 @@ function animatePress(currentColor) {
 function nextSequence() {
     userClickedPattern = [];
     level++;
-    $("h1").fadeIn(300).text("Level "+ level);
+    $("h1").fadeIn(200).text("Level "+ level);
     var randomNumber = Math.floor(Math.random() * 3);
     var randomChosenColor = buttonColors[randomNumber];
     gamePattern.push(randomChosenColor);
