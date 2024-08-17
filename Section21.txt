@@ -1,0 +1,21 @@
+The Unix Command Line
+
+Command Line Techniques and Directory Navigation
+    List files and directories (ls)
+    cd ~
+    cd ..
+    Alt button
+    Ctrl A, Ctrl E
+    Ctrl U: clear the entire line
+
+Creating, Opening, Removing Files through the Command Line
+    New Folder: mkdir Janice
+    New File: touch text2.txt 
+    Open File: start text2.txt | open text2.tx (with mac)
+    Open in VsCode: code text2.txt | open -a [dir]
+    Remove File: rm text.rtf
+    Remove all files: rm *
+    Print current working directory: pwd
+    Remove Folder: rm -r [folder name]
+    
+    Be careful while using destructive commands
