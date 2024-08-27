@@ -1,0 +1,29 @@
+What is Node.js?
+    An asynchronous event-driven JavaScript runtime,
+    Node.js is designed to build scalable network applications.
+
+Using Node.js
+    node -v
+    Node REPL (Read Eval Print Loop): node
+    node
+    .exit : to exit
+    Ctrl C: get out of anything in the command line
+
+How to Use the Native Node Modules
+    What are Native Modules? - start bundles/library
+
+The NPM Package Manager and Installing External Node Modules
+    Node Package Manager
+    npm init
+    npm install <something> | npm i <something>
+    npm i <something> <something> <something>
+    console.log(`My name is ${sillyName}.`);
+    
+    ECMAScript Modules
+    "main": "index.js",
+    "type": "module",
+
+    import xxx from ""
+
+Project QR Code Generator
+    npm init -y

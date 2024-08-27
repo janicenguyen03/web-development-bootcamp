@@ -1,0 +1,62 @@
+What is Express? - Framework
+
+Creating Our First Server with Express
+    Client-side & Server-side
+    Six steps:
+        1. Create directory
+        2. Create index.js file
+        3. Initialize NPM
+            npm init -y
+        4. Install the Express package
+            npm i express
+            "type" : "module",
+        5. Write Server applicaiton in index.js
+            import express from "express";
+            const app = express();
+            const port = 3000;
+
+            app.listen(port, () => {
+                console.log(`Server running on port ${port}.`);
+            })
+        6. Start server
+            node index.js
+    
+    Windows: netstat -ano | findstr "LISTENING"
+    Mac/Linux sudo lsof -i -P -n | grep LISTEN
+    Ctrl C: exit
+
+
+HTTP Requests
+    HTTP: HyperText Transfer Protocol
+    Request vocab: get, post, put, patch, delete
+        get: request resource
+        post: sending resource
+        put & patch: update method
+            put: replace resource | replace the whole
+            patch: patch up a resource | replace the broken part
+        delete: delete resource
+    "/": homepage
+    req.rawHeaders
+
+    nodemon index.js: restart everytime there is a change
+    npm i -g nodemon
+        -g: global, for every project
+
+Postman
+    Making Requests
+    201 OK
+    1** Hold on (informational)
+    2** Here you go (successful)
+    3** Go away (redirect)
+    4** U fvcked up (client error)
+    5** I fvcked up  (server error)
+
+
+Introduction to Middlewares
+
+
+Custom Middlewares
+
+
+Secrets Access Project
+
