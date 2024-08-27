@@ -53,10 +53,48 @@ Postman
 
 
 Introduction to Middlewares
+    pre-process the requests: body-parser
+    authentication: morgan
+    logging
+    error
 
+    body parser
+    <form action="/login" method="POST">
+        <label for="email">Email</label>
+        <input type="text" name="email" required>
+        <label for="password">Password</label>
+        <input type="text" name="password" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    import { dirname } from "path";
+    import { fileURLToPath } from "url";
+    const __dirname = dirname(fileURLToPath(import.meta.url));
+
+    import express from "express";
+    import bodyParser from "body-parser";
+
+    const app = express();
+    const port = 3000;
+
+    app.use(bodyParser.urlencoded({ extende: true }));
+
+    app.post("/submit", (req,res) => {
+        console.log(req.body);
+    });
+    
+    app.listen(port, () => {
+        console.log(`Listening on port ${port}`);
+    })
 
 Custom Middlewares
+    import morgan from "morgan";
+    app.use(morgan("combined"));
 
+    app.use((req, res, next) => {
+        console.log("Request method: ", req.method);
+        next(); | next app.use IMPORTANT
+    })
 
 Secrets Access Project
 
