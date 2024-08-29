@@ -1,0 +1,10 @@
+EJS: little JS in html
+    res.render("index.ejs",
+    { name: req.body["name"]}
+    );
+
+    <body>
+        <h1>
+            Hello <%= name %>
+        </h1>
+    </body>
