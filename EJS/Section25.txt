@@ -8,3 +8,27 @@ EJS: little JS in html
             Hello <%= name %>
         </h1>
     </body>
+
+EJS Tags
+    <%= variable %>                     JS Output
+    <% console.log("hello") %>          JS Execute NO OUTPUT - like javascript
+    <%- <h1>Hello</h1> %>               Render HTML
+    <%% %%>                             Show <% or %>
+    <%# This is a comment %>            Stop Execution (work like a comment tag)
+    <%- include("<header.ejs>") %>      Insert another EJS file with same header footer
+
+Passing Data to EJS Templates
+    res.locals = {data: 42}
+    if locals.fruits
+
+    <form action="/submit" method="POST">
+        <input type="text" name="fName" placeholder="First name">
+        <input type="text" name="lName" placeholder="Last name">
+        <input type="submit" value="OK">
+    </form>
+
+    app.post("/submit", (req, res) => {
+        res.render("index.ejs", 
+        { name: req.body["fName"] }
+        );
+    });
