@@ -1,0 +1,15 @@
+Version Control
+    set version
+    code chapter1.txt to open a file
+    q to exit git log
+    git diff [file name]
+    git checkout [file name]: restore the last commit version of the current file
+
+Git Remote Repositories
+    -u links up your remote and your local repositories
+
+Gitignore
+    Ignore not to upload on github
+    git rm --cached -r .   | undo the last step
+    # for comment
+    *.txt | ignore all text files
