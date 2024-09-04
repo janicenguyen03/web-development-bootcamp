@@ -13,3 +13,16 @@ Gitignore
     git rm --cached -r .   | undo the last step
     # for comment
     *.txt | ignore all text files
+
+Git Clone
+    git clone url
+
+Branching and Merging
+    git branch [name]
+    git branch : list out branches, branch with * : where u at
+    git checkout [name]: switch to the branch
+
+Forking and Pull Requests
+    pull request: suggestion
+
+    forking: duplicate a remote git repository under your own account
