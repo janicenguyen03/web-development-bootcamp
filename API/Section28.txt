@@ -1,0 +1,49 @@
+Application Programming Interfaces (APIs)
+
+Introduciton to APIs
+    REST APIs: follows set of rules: HTTP Protocol
+        GET POST PUT PATCH DELETE
+    Use POSTMAN
+
+Structuring API Requests
+    Private API
+    Public API
+
+    http://bored-api.appbrewery.com
+
+    API Endpoints: BaseURL/Endpoint
+        /random
+        /filter
+    
+    Query Parameters: searching
+        BaseURL/endpoint?query=value&query2=value
+
+    Path Parameters: identify your resource
+        BaseURL/endpoint/{path-parameter}
+            id
+            username
+
+What is JSON?
+    flat-packed
+    jsonviewer.stack.hu
+    JS object -> JSON: serialization
+    const jsonData = JSON.stringify(data) | pack a JSON
+    const data = JSON.parse(jsonData)     | unpack JSON
+
+Making Server-side API Requests with Axios
+    import axios from "axios";
+    app.get("/".async(req, res) => {
+        try {
+            const response = await axios.get([URL]);
+            res.render("index.ejs", {activity: response.data }); | response.data - JSON.parse() automatically
+        } catch (error) {
+            console.error([message], error.message);
+            res.status(500).send([message]);
+        }
+    })
+
+API Authentication
+
+REST APIs
+
+Secrets Project
