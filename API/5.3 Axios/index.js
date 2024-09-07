@@ -3,13 +3,13 @@ import bodyParser from "body-parser";
 import axios from "axios";
 
 const app = express();
-const port = 3000;
+const port = 4000;
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Step 1: Make sure that when a user visits the home page,
-//   it shows a random activity.You will need to check the format of the
+//   it shows a random activity. You will need to check the format of the
 //   JSON data from response.data and edit the index.ejs file accordingly.
 app.get("/", async (req, res) => {
   try {
@@ -25,8 +25,26 @@ app.get("/", async (req, res) => {
 });
 
 app.post("/", async (req, res) => {
-  console.log(req.body);
-
+  try {
+    var type = req.body.type;
+    var participant = req.body.participants;
+    const htmlToFetch = `https://bored-api.appbrewery.com/filter?type=${type}&participants=${participant}`;
+    const response = await axios.get(htmlToFetch);
+    const all = response.data;
+    const result = all[Math.floor(Math.random() * all.length)];
+    res.render("index.ejs", { data: result });
+  } catch (error) {
+    console.error("Failed to make request:", error.message);
+    var message = "";
+    if (error.response.status == "404") {
+      message = "No activities that match your criteria."
+    } else {
+      message = error.message
+    }
+    res.render("index.ejs", {
+      error: message,
+    });
+  }
   // Step 2: Play around with the drop downs and see what gets logged.
   // Use axios to make an API request to the /filter endpoint. Making
   // sure you're passing both the type and participants queries.
