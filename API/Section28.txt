@@ -66,5 +66,40 @@ API Authentication
         token: 23c348b3-637b-4601-8d82-778a28660c89
 
 REST APIs
+    GET
+        try {
+            await axios.get("URL", config); | config: headers, params, auth, etc
+            res.sendStatus(201);
+        } catch (error) {
+            res.status(404).send(error.response.data);
+        }
+    POST
+        try {
+            await axios.post("URL", body, config); | body: data (username, password)
+            res.sendStatus(201);
+        } catch (error) {
+            res.status(404).send(error.response.data);
+        }
+    PUT | replace every data
+        try {
+            await axios.put("URL", body, config);
+            res.sendStatus(201);
+        } catch (error) {
+            res.status(404).send(error.response.data);
+        }
+    PATCH | update one piece of data
+        try {
+            await axios.patch("URL", body, config);
+            res.sendStatus(200);
+        } catch (error) {
+            res.status(404).send(error.response.data);
+        }
+    DELETE
+        try {
+            await axios.delete("URL", config);
+            res.sendStatus(200);
+        } catch (error) {
+            res.status(404).send(error.response.data);
+        }
 
 Secrets Project
