@@ -1,0 +1,54 @@
+Building your own APIs
+    Rapid API
+    Monetized APIs
+        Data collection
+        Algorithm/Service
+        Simplified Interface
+    Internal APIs
+        private
+
+    What makes an API RESTful?
+        1. Uses HTTP Methods:
+            GET POST PUT PATCH DELETE
+            -standard verbs to interact with a RESTful API
+        2. Have a standard data format that it responds with:
+            JSON format, XML
+            -> client
+            representation part of the representational state transfer
+        3. Client-server in RESTful APIs are complete separate
+            message each other over a network
+            to make requests and get back responses
+        4. Stateless
+            each request from the client to the server should contain
+            all the information that's needed to understand and process the request
+
+            each single request/response is complete
+            without need to know what happened previously
+        5. Resource-based
+            Unique Resource Identifier/Locator
+            URI/URL
+
+Creating GET Routes
+    req.params: path parameters
+    array.find(callback => condition) | loop to find
+    query params
+        /filter
+        type = req.query.type;
+    array.filter(callback => condition) | loop to filter and return an array
+
+Creating POST, PUT, and PATCH Routes
+    jokeText: req.body.text || currentJoke.jokeText
+        if (req.body.text) {
+            jokeText = req.body.text
+        } else {
+            jokeText = currentJoke.jokeText
+        }
+    jokes.slice(-1) | take the last element
+
+Creating the DELETE Routes
+    jokes.splice(searchIndex, 1) | remove the joke with that index, remove only one element from the array
+
+Build your own API for a Blog
+    if (!post) return res.status(404).json({ message: "Post not found" })
+    res.status(201).json(newPost);
+    if (req.body.title) post.title = req.body.title;
