@@ -1,0 +1,137 @@
+PostgreSQL
+    WebApp
+    Client Server App Database
+
+Postgres TABLEs, types & keywords
+    columns: fields
+    rows: individual records
+
+    CREATE TABLE <Name of Table> (
+        <field1> <DATATYPE>,
+        <field2> <DATATYPE>,
+        <field3> <DATATYPE>
+    )
+
+    CREATE TABLE friends (
+        id SERIAL PRIMARY KEY,
+        name VARCHAR(50),
+        age INT,
+        is_cool BOOLEAN
+    );
+
+    VARCHAR(50) : if var is less than 50, size down to the var
+    CHAR(50) : always 50 no matter what
+    TEXT: no maximum size, adjust to the var
+
+    header in the csv must match the column names in pgAdmin
+
+READ data from a Postgres database
+
+Querying Data:
+    How to use SELECT WHERE and LIKE in PostgreSQL
+        SELECT <COLUMN> FROM <TABLE>;
+        SELECT <COLUMN>, <COLUMN> FROM <TABLE>;
+        SELECT <COLUMN> FROM <TABLE> WHERE <CONDITION>;
+            EQUALS: country = 'United States'  | IMPORTANT: single quote
+            WHERE > < >= <= 
+            WHERE <COLUMN> LIKE <PATTERN>
+                %: wild card
+                'United' || '%'
+                '%' || 'a' OR '%a'
+    UNIQUE and NOT NULL
+        NOT NULL: missing or empty values are not allowed
+        UNIQUE: value cannot be repeated in the table
+
+INSERT and Add Data
+    INSERT INTO <TABLE> (<COLUMN1>, <COLUMN1>)
+    VALUES (<VALUE1>, <VALUE2>)
+    db.query(SQL, values)
+        db.query(
+            "INSERT INTO world_food (country,
+            rice_production, wheat_production)
+            VALUES ($1, $2, $3)",
+        ["Italy", 1.46, 7.3]);
+
+        $: placeholder - number 1, 2, 3 in order
+
+
+My solution1:
+    db.query("SELECT country_code FROM visited_countries", (err, res) => {
+    if (err) {
+        console.error("Error executing query", err.stack);
+    } else {
+        const all = res.rows;
+        console.log(all);
+        all.forEach(code => result.push(code.country_code));
+    }
+    db.end();
+    })
+
+    const result = await db.query(
+      "SELECT country_code FROM countries\
+      WHERE LOWER(country_name) LIKE $1 || '&' OR '%' || $1",
+      [name]
+    );
+
+
+ONE to ONE Relationships & Inner Joins
+    Usage: split up a large table
+    CREATE TABLE student (
+        id SERIAL PRIMARY KEY,
+        first_name TEXT,
+        last_name TEXT
+    );
+
+    CREATE TABLE contact_detail (
+        id INTEGER REFERENCES student(id) UNIQUE,
+        tel TEXT,
+        address TEXT
+    )
+
+ONE to MANY Relationships
+
+MANY to MANY Relationships
+    Queries using Aliases
+        SELECT student.id AS stud,
+    Shorten & simplify queries
+        FROM enrollment AS e
+        JOIN student AS s ON s.id = e.student_id
+
+        SELECT s.id AS stud,
+        FROM enrollment e
+        JOIN student s ON s.id = e.student_id
+
+UPDATE and DELETE
+    ALTER (change the schema)
+        ALTER TABLE <TABLE TO ALTER>
+            <DO SOMETHING>
+        
+        ALTER TABLE student RENAME TO user;
+        ALTER TABLE user ALTER COLUMN first_name TYPE VARCHAR(20);
+        ALTER TABLE contact_detail ADD email TEXT
+
+        CREATE TABLE example (
+            a integer,
+            b integer,
+            c integer,
+            UNIQUE(a, c)
+        )
+
+        ALTER TABLE visited_countries
+        ADD UNIQUE (user_id, country_code)
+    
+    DROP TABLE <NAME OF TABLE> (from the database) = DELETE whole table
+
+    UPDATE DATA
+        UPDATE <TABLE TO UPDATE>
+        SET <COLUMN TO UPDATE> = value, ...
+        WHERE <SOME CONDITION>;
+    
+    ORDER BY (RETRIEVE)
+        SELECT *
+        FROM <SOME TABLE>
+        ORDER BY <SOME CONDITION> | id ASC/ DESC
+    
+    DELETE DATA
+        DELETE FROM <TABLE TO DELETE>
+        WHERE <SOME CONDTION>;

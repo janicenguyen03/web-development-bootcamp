@@ -1,0 +1,55 @@
+SQL/Relational database
+    Structured Query Language
+    Postgres, MySQL
+
+NoSQL:
+    JSON
+    flexibility, one can have more fields than others
+    scalability
+    Eg: MongoDB, Redis, DynamoDB
+
+SQL commands: CREATE table and INSERT data
+    CRUD: Create Read Update Destroy
+    CREATE TABLE table_name {
+        column1 datatype,
+        column2 datatype,
+        column3 datatype,
+
+        PRIMARY KEY (column1)
+    }
+
+    INSERT INTO table_name (column1, column2, column3, ...)
+    VALUES (value1, value2, value3, ...);
+
+    INSERT INTO table_name
+    VALUES (value1, value2, value3, ...);
+
+    CREATE TABLE products (
+        id INT NOT NULL,
+        name STRING,
+        price MONEY,
+        PRIMARY KEY (id)
+        )
+
+SQL commands: READ, SELECT, and WHERE
+    SELECT: read from the table
+    WHERE: condition (id=1)
+
+Updating Single Values and Adding Columns in SQL
+    UPDATE table_name
+    SET column1 = value1, column2 = value2, ...
+    WHERE condition;
+
+    ALTER: add, delete, modify columns in an existing table
+    ALTER TABLE table_name
+    ADD column_name datatype;
+
+SQL commands: DELETE
+    DELETE FROM products
+    WHERE condition;
+
+Understanding SQL Relationships, Foreign Keys and Inner Joins
+    Inner Joins
+    SELECT column_name.s
+    FROM table1
+    INNER JOIN table2 ON table1.column_name = table2.column_name;
