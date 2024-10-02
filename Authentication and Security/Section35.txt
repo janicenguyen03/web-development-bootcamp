@@ -1,0 +1,50 @@
+Introduciton to Authentication
+    Account
+    Restrict Access
+    Home -> Register/Login -> Secrets
+
+Level 1 - Registering Users with Email and Password
+
+Level 2 - Encryption and Hashing
+    The process of converting information or data into a code (cipher),
+        especially to prevent unauthorized access
+
+    Caesar Cipher (shift alphabet by key)
+
+    Password + Key -(cipher method)-> Ciphertext
+
+    AES-256
+
+    Password -(Hash function)-> Hash (almost impossible to go back to password)
+        store hash into database
+
+How to Hack Passwords
+
+Level 3 - How to Salt Passwords for Improved Encryption
+    Salting
+        password + salt -(hash function)-> hash
+    bcrypt: standard hashing algorithms
+    salt rounds
+        round n+: hash + salt -> hash
+    
+    bcrypt.compare(loginPassword, storedHashedPassword) // Have to be in this order
+
+Managing Cookies and Sessions
+    passport
+    passport go after session
+
+Level 5 - Hide your Secrets with Environment Variables
+    Convenience
+    Security
+
+Level 6 - OAuth: Implement "Sign In with Google"
+    1. Granular Access Levels
+    2. Read/Read+Write Access
+    3. Revoke Access
+
+    Step 1 - Set up your app
+    Step 2 - Redirect to Authenticate
+    Step 3 - User Logs In
+    Step 4 - User Grants Permissions
+    Step 5 - Receive Authorization code
+    Step 6 - Exchange AuthCode for Access Token
