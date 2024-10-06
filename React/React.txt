@@ -1,0 +1,41 @@
+React: a Javascript library for building user interfaces
+NavBar -> App -> ToDoList -> ListItem -> Checkbox/ItemText
+into components
+
+npm create vite@latest my-react-app --template react
+
+React
+Javascript
+cd my-react-app
+npm install
+npm run dev
+http://localhost:5173/
+
+var React = require("react"); | come from node not from javascript
+var ReactDOM = require("react-dom");
+
+import React from "react";
+import ReactDOM from "react-dom";
+
+ReactDOM.render(WHAT TO SHOW, WHERE TO SHOW IT);
+render can only take one single element
+
+export default pi
+export {doublePi, triplePi};
+
+import PI, {doublePi, triplePi} from "./math.js";
+    doesn't matter name for import default, but do for multiple
+    multiple: order not matter, name matters
+
+import * as pi from "./math.js" | return an object
+    pi.default
+    pi.doublePi()
+    pi.triplePi()
+
+every file can only export a single default that
+    can be stores as anyname in the import file.
+
+React Properties
+    props: value with functions: Card(props)
+        {props.name}
+    <Card name="Beyonce" />
