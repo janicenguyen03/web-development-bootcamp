@@ -39,3 +39,33 @@ React Properties
     props: value with functions: Card(props)
         {props.name}
     <Card name="Beyonce" />
+    props have to match with the passing var
+
+How you structure your component tree
+
+functional programming: must have key
+
+Map/Filter/Reduce/Find/FindIndex
+    map: Create a new array by doing something with each item in an array.
+    filter: Create a new array by keeping the items that return true.
+    reduce: Accumulate a value by doing something to each item in an array.
+    find: find the first item that matches from an array.
+    findIndex: find the index of the first item that matches.
+
+Single Property Principle
+
+Ternary Operator:
+    CONDITION ? DO IF TRUE : DO IF FALSE
+    { currentTime > 12 && <h1>Why are you still working?</h1> }
+    = { currentTime > 12 ? <h1>Why are you still working?</h1> : null }
+
+UI = f(State)
+Declarative Programming: how the website should look under certain states
+Imperative Programming: explicit instructions
+
+Hook, useState(Hook)
+    useState([starting state])
+    state[0]
+
+Destructuring: Destructure commplex structures (objects, arrays)
+    const [red, green, blue] = [9, 132, 227]
