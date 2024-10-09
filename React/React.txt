@@ -69,3 +69,29 @@ Hook, useState(Hook)
 
 Destructuring: Destructure commplex structures (objects, arrays)
     const [red, green, blue] = [9, 132, 227]
+
+{backgroundColor: isHovered ? "black" : "white"}
+
+event
+    event.target.value - value is entered
+    event.target.placeholder - box is entered
+    event.target.type - type of the value
+    event.preventDefault
+
+Controlled components
+
+Use Hooks within functional components only
+
+don't access to event in the state setter (these events are synthetic)
+    eg:
+    setFullname(prevValue => {
+        if (event.target.name === name)
+    })
+
+setContact(prevValue => {
+      return {
+        ...prevValue,
+        [name]: value
+      }
+    });
+setContact((prevValue) => ({ ...prevValue, [name]: value }));
